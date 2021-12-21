@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="kr6_v5">
+  <link name="world"/>
+  <joint 
+    name="world_joint"
+    type="fixed">
+    <parent
+      link="world" />
+    <child
+      link="dummy_link" />
+  </joint>
+  <link name="dummy_link"/>
+  <joint 
+    name="dummy_joint"
+    type="fixed">
+    <parent
+      link="dummy_link" />
+    <child
+      link="base_link" />
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 5.5511E-17 0.089687"
+        rpy="0 0 0" />
+      <mass
+        value="1059.757" />
+      <inertia
+        ixx="2.0043"
+        ixy="7.0399E-17"
+        ixz="1.4025E-17"
+        iyy="1.9904"
+        iyz="1.5709E-17"
+        izz="3.4174" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l1">
+    <inertial>
+      <origin
+        xyz="0.10748 1.104E-06 0.40131"
+        rpy="0 0 0" />
+      <mass
+        value="108.68" />
+      <inertia
+        ixx="8.1398"
+        ixy="3.1331E-05"
+        ixz="-3.3196"
+        iyy="10.286"
+        iyz="1.275E-05"
+        izz="4.6315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l1j"
+    type="revolute">
+    <origin
+      xyz="0 0 0.15"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.2"
+      upper="3.2"
+      effort="50000"
+      velocity="2.72" />
+  </joint>
+  <link
+    name="l2">
+    <inertial>
+      <origin
+        xyz="-0.0882961411823312 -0.0195458235269697 0.350516240830925"
+        rpy="0 0 0" />
+      <mass
+        value="19.0484979909924" />
+      <inertia
+        ixx="1.54282672938812"
+        ixy="-0.0409203624281092"
+        ixz="0.354946702854769"
+        iyy="1.5914800848933"
+        iyz="0.162444829634413"
+        izz="0.223178633229203" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l2j"
+    type="revolute">
+    <origin
+      xyz="0.35 -0.1 0.815"
+      rpy="0 0 0" />
+    <parent
+      link="l1" />
+    <child
+      link="l2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1"
+      upper="2"
+      effort="50000"
+      velocity="2.72" />
+  </joint>
+  <link
+    name="l3">
+    <inertial>
+      <origin
+        xyz="0.27915 0.070676 -0.081656"
+        rpy="0 0 0" />
+      <mass
+        value="14.618" />
+      <inertia
+        ixx="0.52588"
+        ixy="-0.012706"
+        ixz="0.64541"
+        iyy="2.6019"
+        iyz="0.003709"
+        izz="2.1889" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l3j"
+    type="revolute">
+    <origin
+      xyz="-0.207631339859528 0.0388600000000001 0.824250706222407"
+      rpy="0 0 0" />
+    <parent
+      link="l2" />
+    <child
+      link="l3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="10000"
+      velocity="2.72" />
+  </joint>
+  <link
+    name="l4">
+    <inertial>
+      <origin
+        xyz="0.12033 -7.5101E-08 -0.059844"
+        rpy="0 0 0" />
+      <mass
+        value="3.0974" />
+      <inertia
+        ixx="0.0086187"
+        ixy="7.3193E-09"
+        ixz="0.0021149"
+        iyy="0.011818"
+        iyz="3.3917E-09"
+        izz="0.011819" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l4j"
+    type="revolute">
+    <origin
+      xyz="0.709241905394179 0.0719950000000005 -0.190790250361053"
+      rpy="0 0 0" />
+    <parent
+      link="l3" />
+    <child
+      link="l4" />
+    <axis
+      xyz="0.89537857085129 0 -0.445305754353456" />
+    <limit
+      lower="-6.1"
+      upper="6.1"
+      effort="1000"
+      velocity="5.99" />
+  </joint>
+  <link
+    name="l5">
+    <inertial>
+      <origin
+        xyz="0.0069222 8.1476E-08 -0.0034424"
+        rpy="0 0 0" />
+      <mass
+        value="1.67271" />
+      <inertia
+        ixx="0.0018727"
+        ixy="-1.1811E-09"
+        ixz="0.00012007"
+        iyy="0.0010091"
+        iyz="3.1402E-10"
+        izz="0.0020544" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l5j"
+    type="revolute">
+    <origin
+      xyz="0.185791053451642 0 -0.0924009440283406"
+      rpy="0 0 0" />
+    <parent
+      link="l4" />
+    <child
+      link="l5" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.2"
+      upper="2.2"
+      effort="1000"
+      velocity="6.32" />
+  </joint>
+  <link
+    name="l6">
+    <inertial>
+      <origin
+        xyz="0.0261781736095704 -1.11022302462516E-16 -0.0130193995325603"
+        rpy="0 0 0" />
+      <mass
+        value="0.8797206242961897" />
+      <inertia
+        ixx="2.52704155177287E-05"
+        ixy="-3.1803606298463E-21"
+        ixz="2.62013226938247E-06"
+        iyy="3.05387289492656E-05"
+        iyz="9.98398104867957E-21"
+        izz="2.92356377041692E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/l6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l6j"
+    type="revolute">
+    <origin
+      xyz="0.035815 0 -0.017812"
+      rpy="0 0 0" />
+    <parent
+      link="l5" />
+    <child
+      link="l6" />
+    <axis
+      xyz="0.89538 0 -0.44531" />
+    <limit
+      lower="-6.1"
+      upper="6.1"
+      effort="100"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="g">
+    <inertial>
+      <origin
+        xyz="0.0732032813011307 4.45776506929896E-07 -0.0364059084666251"
+        rpy="0 0 0" />
+      <mass
+        value="0.264138905602098" />
+      <inertia
+        ixx="0.000194905343327247"
+        ixy="2.47107813328709E-20"
+        ixz="5.24341435168683E-05"
+        iyy="0.000243435321027011"
+        iyz="-1.08811584542357E-19"
+        izz="0.000274257455291082" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/g.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/g.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gj"
+    type="fixed">
+    <origin
+      xyz="0.012117 0 -0.0060261"
+      rpy="0 0 0" />
+    <parent
+      link="l6" />
+    <child
+      link="g" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="f1">
+    <inertial>
+      <origin
+        xyz="0.091422239238048 0.01 -0.056636210491801"
+        rpy="0 0 0" />
+      <mass
+        value="0.2740146018366027" />
+      <inertia
+        ixx="4.75453097295364E-05"
+        ixy="-2.39112304414523E-20"
+        ixz="8.54134811183698E-05"
+        iyy="0.000219375729411499"
+        iyz="1.26285925852741E-20"
+        izz="0.000176807268871586" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/f1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/f1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f1j"
+    type="revolute">
+    <origin
+      xyz="0.11679 -0.066 -0.046917"
+      rpy="0 -0.46152 -3.1416" />
+    <parent
+      link="g" />
+    <child
+      link="f1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="5"
+      velocity="5" />
+  </joint>
+  <link
+    name="f2">
+    <inertial>
+      <origin
+        xyz="0.091422239238048 -0.01 -0.056636210491801"
+        rpy="0 0 0" />
+      <mass
+        value="0.2740146018366027" />
+      <inertia
+        ixx="4.75453097295364E-05"
+        ixy="-9.74452057697228E-20"
+        ixz="8.54134811183697E-05"
+        iyy="0.000219375729411498"
+        iyz="4.90034363057179E-20"
+        izz="0.000176807268871586" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/f2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kr6_v5/meshes/f2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f2j"
+    type="revolute">
+    <origin
+      xyz="0.11679 0.066 -0.046917"
+      rpy="-3.1416 0.46152 0" />
+    <parent
+      link="g" />
+    <child
+      link="f2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="5"
+      velocity="5" />
+  </joint>
+
+  <transmission name="t_l1j">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l1j">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="a_l1j">
+      <!-- not to sure about this 50 here -->
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="t_l2j">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l2j">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="a_l2j">
+      <!-- not to sure about this 50 here -->
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="t_l3j">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l3j">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="a_l3j">
+      <!-- not to sure about this 50 here -->
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="t_l4j">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l4j">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="a_l4j">
+      <!-- not to sure about this 50 here -->
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="t_l5j">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l5j">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="a_l5j">
+      <!-- not to sure about this 50 here -->
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="t_l6j">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="l6j">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="a_l6j">
+      <!-- not to sure about this 50 here -->
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="t_f1j">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f1j">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="a_f1j">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="t_f2j">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f2j">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="a_f2j">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <!--  Gazebo plugin for control here is already added for you -->
+	<gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>/</robotNamespace>
+			<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+			<legacyModeNS>true</legacyModeNS>
+		</plugin>
+	</gazebo>
+
+</robot>

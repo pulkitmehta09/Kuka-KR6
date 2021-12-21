@@ -1,0 +1,52 @@
+# default controller
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+# Controller 1
+c_l1j: 
+  type: effort_controllers/JointPositionController
+  joint: l1j
+  pid: {p: 1500, i: 50, d: 750}
+
+# Controller 2
+c_l2j:
+  type: effort_controllers/JointPositionController
+  joint: l2j
+  pid: {p: 2500, i: 50, d: 1500}
+
+# Controller 3
+c_l3j: 
+  type: effort_controllers/JointPositionController
+  joint: l3j
+  pid: {p: 1500, i: 50, d: 750}
+
+# Controller 4
+c_l4j: 
+  type: effort_controllers/JointPositionController
+  joint: l4j
+  pid: {p: 15, i: 5.0, d: 10}
+
+# Controller 5
+c_l5j: 
+  type: effort_controllers/JointPositionController
+  joint: l5j
+  pid: {p: 10, i: 2, d: 5}
+
+# Controller 6
+c_l6j: 
+  type: effort_controllers/JointPositionController
+  joint: l6j
+  pid: {p: 2, i: 0.5, d: 1}
+
+# Controller 7
+c_f1j: 
+  type: effort_controllers/JointPositionController
+  joint: f1j
+  pid: {p: 5, i: 0.5, d: 1}
+
+# Controller 8
+c_f2j: 
+  type: effort_controllers/JointPositionController
+  joint: f2j
+  pid: {p: 5, i: 0.5, d: 1}
