@@ -16,7 +16,7 @@ $ python3 -m pip install rospkg sympy (so everything runs later on)
 ```
 8. Execute in a new terminal 
 ```bash
-$ catkin clean && catkin build. 'catkin build' requires catkin tools to be installed (python3-catkin-tools) (from enpm809y).
+$ catkin clean && catkin build. 'catkin build' requires catkin tools to be installed (python3-catkin-tools)
 ```
 10. source the catkin_ws with the command: 
 ```bash
